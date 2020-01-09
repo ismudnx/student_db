@@ -1,24 +1,15 @@
-# README
+# Student DB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple application serving as a database of students using Rails & Bootstrap
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+ Setup ruby & bundler if you haven't already. 
+ 
+ After that run following from project directory
 
-* System dependencies
+`bundle`
 
-* Configuration
+`rake db:create`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rake db:setup`
