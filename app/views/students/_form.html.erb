@@ -22,13 +22,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
+    <%= form.label :mobile %>
+    <%= form.text_field :mobile %>
   </div>
 
   <div class="field">
     <%= form.label :institution_id %>
-    <%= form.number_field :institution_id %>
+    <%= form.select :institution_id, options_from_collection_for_select(Institution.all, :id, :name) %>
   </div>
 
   <div class="actions">

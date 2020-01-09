@@ -11,13 +11,13 @@
 </p>
 
 <p>
-  <strong>Phone:</strong>
-  <%= @student.phone %>
+  <strong>Mobile:</strong>
+  <%= @student.mobile %>
 </p>
 
 <p>
   <strong>Institution:</strong>
-  <%= @student.institution_id %>
+  <%= @student.institution.try(:name) %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
