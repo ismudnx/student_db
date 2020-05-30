@@ -48,7 +48,7 @@ A simple application serving as a database of students using Rails & Bootstrap. 
     - S10 - student name text box
     - S11 - institution name text box
     - S12 - country of student from drop down
-    - This search should work in combination, ie, if student name: 'ism' contry: India, result should have both queries met.
+    - This search should work in combination, ie, if student name: 'ism' country: India, result should have both queries met.
 * Credential system:
     - S13 A system will have preloaded (and extendable from backend for now) credential types, Ex: Higher Secondary, 3 Year Diploma, 3 or More Year Graduation, 2 or  more Year Post Graduation etc
     - S14 A student while registering can choose and add one or more credentials to his profile.
