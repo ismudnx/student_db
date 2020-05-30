@@ -31,6 +31,7 @@ A simple application serving as a database of students using Rails & Bootstrap. 
 * You are free to use necessary gems
 * Write readable maintainable code
 * Code/Queries should be optimised for performance
+* Add/Modify db seeds based on any addtion/change in models
 
 ## User stories
 
