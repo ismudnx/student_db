@@ -15,7 +15,7 @@
       timeout: 5000
 
     development:
-      <<: *sqlite
+      <<: *default
       database: db/students_db_dev.sqlite3
 
     # Warning: The database defined as "test" will be erased and
