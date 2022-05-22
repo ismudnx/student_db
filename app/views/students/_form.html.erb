@@ -1,47 +1,49 @@
-<%= form_with(model: student, local: true) do |form| %>
-  <% if student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+<div class="row">
+  <%= form_with(model: student, local: true, class: 'col-lg-4') do |form| %>
+    <% if student.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
-      <ul>
-      <% student.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% student.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group mb-3">
+      <%= form.label :full_name %>™
+      <%= form.text_field :full_name, class: "form-control" %>
     </div>
-  <% end %>
 
-  <div class="form-group">
-    <%= form.label :full_name %>
-    <%= form.text_field :full_name, class: "form-control" %>
-  </div>
+    <div class="form-group mb-3">
+      <%= form.label :address %>
+      <%= form.text_area :address, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :address %>
-    <%= form.text_area :address, class: "form-control" %>
-  </div>
+    <div class="form-group mb-3">
+      <%= form.label :mobile %>
+      <%= form.text_field :mobile, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :mobile %>
-    <%= form.text_field :mobile, class: "form-control" %>
-  </div>
+    <div class="form-group mb-3">
+      <%= form.label :dob, 'Date of birth' %>
+      <%= form.date_field :dob, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :dob, 'Date of birth' %>
-    <%= form.date_field :dob, class: "form-control" %>
-  </div>
+    <div class="form-group mb-3">
+      <%= form.label :score %>
+      <%= form.number_field :score, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :score %>
-    <%= form.number_field :score, class: "form-control" %>
-  </div>
+    <div class="form-group mb-3">
+      <%= form.label :institution_id %>
+      <%= form.select :institution_id, options_from_collection_for_select(Institution.all, :id, :name), {}, class: "form-control form-control-lg" %>
+    </div>
 
-  <div class="form-group">
-    <%= form.label :institution_id %>
-    <%= form.select :institution_id, options_from_collection_for_select(Institution.all, :id, :name), {}, class: "form-control form-control-lg" %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit 'Save' , class: 'btn btn-primary'%>
-  </div>
+    <div class="form-group mb-3 actions">
+      <%= form.submit 'Save' , class: 'btn btn-primary'%>
+    </div>
 <% end %>
+</div>
