@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_27_132603) do
+ActiveRecord::Schema.define(version: 2022_05_22_091606) do
 
   create_table "institutions", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 2019_12_27_132603) do
     t.integer "institution_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "score"
+    t.date "dob"
   end
 
 end
